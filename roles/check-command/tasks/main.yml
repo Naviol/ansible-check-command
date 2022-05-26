@@ -1,0 +1,9 @@
+---
+- name: Check is geth installed
+  shell: command -v geth >/dev/null 2>&1
+  register: is_exist
+  check_mode: false
+  changed_when: false
+  ignore_errors: yes
+
+- debug: msg="{{ is_exist.rc }}"

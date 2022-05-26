@@ -1,0 +1,5 @@
+---
+- name: run check-command role
+  hosts: all
+  roles:
+    - check-command
